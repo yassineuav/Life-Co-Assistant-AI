@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+.env.local
+.env.*
+node_modules
+.next
+coverage
+.pytest_cache
+.venv
+postgres_data
