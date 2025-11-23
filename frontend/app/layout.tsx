@@ -1,14 +1,12 @@
 import './globals.css'
 import { ReactNode } from 'react'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-
-const queryClient = new QueryClient()
+import Providers from './providers'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="min-h-screen">
-        <QueryClientProvider client={queryClient}>
+        <Providers>
           <main className="max-w-5xl mx-auto p-6 space-y-6">
             <header className="flex items-center justify-between">
               <div className="font-semibold text-xl">Life Fuel</div>
@@ -22,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </header>
             {children}
           </main>
-        </QueryClientProvider>
+        </Providers>
       </body>
     </html>
   )
